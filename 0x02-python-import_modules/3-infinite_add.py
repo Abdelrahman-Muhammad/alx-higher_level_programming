@@ -1,10 +1,10 @@
 #!/usr/bin/python3
+from sys import argv
+
+
 if __name__ == "__main__":
-    """give the result of the addition of all arguments """
-    import sys
-    total = 0
-    cont = len(sys.argv) - 1
-    for index in range(cont):
-        num = int(sys.argv[index + 1])
-        total += num
-    print("{}".format(total))
+    newsum = 0
+    if len(argv) > 1:
+        for i in range(1, len(argv)):
+            newsum += int(argv[i])
+    print(newsum)
