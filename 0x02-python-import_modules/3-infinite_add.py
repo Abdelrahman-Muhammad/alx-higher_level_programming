@@ -1,11 +1,10 @@
-#!/usr/bin/env python3
-
-import sys
-
-args = sys.argv[1:]
-
-# Convert arguments to integers and sum them up
-result = sum(int(arg) for arg in args)
-
-# Print the result followed by a new line
-print(result)
+#!/usr/bin/python3
+if __name__ == "__main__":
+    """give the result of the addition of all arguments """
+    import sys
+    total = 0
+    cont = len(sys.argv) - 1
+    for index in range(cont):
+        num = int(sys.argv[index + 1])
+        total += num
+    print("{}".format(total))
